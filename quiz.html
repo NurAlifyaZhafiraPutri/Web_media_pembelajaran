@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+	<title>Quiz</title>
+	<link rel="stylesheet" href="styles.css">
+	<script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+	<script>
+		$(document).ready(function(){
+			$(".hamburger").click(function(){
+			   $(".wrapper").toggleClass("collapse");
+			});
+		});
+	</script>
+  <style>
+    body {
+        background-color: #e3f0f8;
+        color: rgb(45, 43, 43);
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    }
+    h2 {
+        color: mistyrose;
+        text-decoration: underline;
+    }
+    table {
+        border-collapse: collapse;
+        border-spacing: 10px;
+        padding: 20px;
+        margin: 0px;
+        background-color: aliceblue;
+    }
+    td, th {
+        padding: 10px;
+    }
+    .quiz-container {
+        background-color: rgb(255, 255, 255);
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    .question {
+        margin-bottom: 20px;
+    }
+
+    .btn-container {
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+        text-align: center;
+    }
+
+    .btn-container button {
+        background-color: #d465a6;
+        color: white;
+        border: none;
+        padding: 15px 35px;
+        font-size: 16px;
+        cursor: pointer;
+        margin-right: 10px;
+        margin-bottom: 45px;
+        border-radius: 30px;
+    }
+      
+  </style>
+</head>
+<body>
+<div class="wrapper">
+  <div class="top_navbar">
+    <div class="hamburger">
+       <div class="one"></div>
+       <div class="two"></div>
+       <div class="three"></div>
+    </div>
+    <div class="top_menu">
+      <div class="logo">Quiz Sistem Tata Surya</div>
+    </div>
+  </div>
+  
+  <div class="sidebar">
+      <ul>
+        <li><a href="materi_1.html">
+          <span class="icon"><i class="fas fa-book"></i></span>
+          <span class="title">Materi 1</span></a></li>
+        <li><a href="materi_2.html">
+          <span class="icon"><i class="fas fa-file-video"></i></span>
+          <span class="title">Materi 2</span></a></li>
+        <li><a href="quiz.html" class="active">
+          <span class="icon"><i class="fas fa-volleyball-ball"></i></span>
+          <span class="title">Quiz</span></a></li>
+    </ul>
+  </div>
+  
+  <div class="main_container">
+    <div class="container quiz-container">
+        <h1 class="text-center mb-4" style="font-size: 30px;"><center>Quiz Sistem Tata Surya</center></h1>
+        <br>
+        <form id="quizFormPart1">
+          <div class="question">
+            <p>1. Planet manakah yang dikenal sebagai "Planet Berkarat"?</p>
+            <input type="radio" name="q1" value="a"> a. Bumi<br>
+            <input type="radio" name="q1" value="b"> b. Jupiter<br>
+            <input type="radio" name="q1" value="c"> c. Mars<br>
+            <input type="radio" name="q1" value="d"> d. Saturnus<br>
+          </div>
+      
+          <div class="question">
+            <p>2. Apa nama planet terbesar di Tata Surya?</p>
+            <input type="radio" name="q2" value="a"> a. Mars<br>
+            <input type="radio" name="q2" value="b"> b. Jupiter<br>
+            <input type="radio" name="q2" value="c"> c. Saturnus<br>
+            <input type="radio" name="q2" value="d"> d. Neptunus<br>
+          </div>
+      
+          <div class="question">
+            <p>3. Planet manakah yang memiliki lapisan atmosfer paling tebal di Tata Surya?</p>
+            <input type="radio" name="q3" value="a"> a. Venus<br>
+            <input type="radio" name="q3" value="b"> b. Bumi<br>
+            <input type="radio" name="q3" value="c"> c. Jupiter<br>
+            <input type="radio" name="q3" value="d"> d. Saturnus<br>
+          </div>
+      
+          <div class="question">
+            <p>4. Apa nama planet yang memiliki cincin yang sangat tipis dan tidak terlihat dengan mata telanjang?</p>
+            <input type="radio" name="q4" value="a"> a. Jupiter<br>
+            <input type="radio" name="q4" value="b"> b. Uranus<br>
+            <input type="radio" name="q4" value="c"> c. Neptunus<br>
+            <input type="radio" name="q4" value="d"> d. Saturnus<br>
+          </div>
+      
+          <div class="question">
+            <p>5. Planet manakah yang memiliki hari yang lebih panjang daripada tahunnya?</p>
+            <input type="radio" name="q5" value="a"> a. Mars<br>
+            <input type="radio" name="q5" value="b"> b. Venus<br>
+            <input type="radio" name="q5" value="c"> c. Jupiter<br>
+            <input type="radio" name="q5" value="d"> d. Saturnus<br>
+          </div>
+      
+          <div class="question">
+            <p>6. Apa yang disebut dengan komet?</p>
+            <input type="radio" name="q6" value="a"> a. Kumpulan gas dan debu yang mengorbit matahari<br>
+            <input type="radio" name="q6" value="b"> b. Potongan batu yang terbakar di atmosfer Bumi<br>
+            <input type="radio" name="q6" value="c"> c. Batu besar yang mengorbit antara Mars dan Jupiter<br>
+            <input type="radio" name="q6" value="d"> d. Potongan es dan batu yang mengorbit matahari<br>
+          </div>
+      
+          <div class="question">
+            <p>7. Apa yang membedakan meteor, meteorit, dan meteoroid?</p>
+            <input type="radio" name="q7" value="a"> a. Ukuran dan komposisi mereka<br>
+            <input type="radio" name="q7" value="b"> b. Lokasi mereka di Tata Surya<br>
+            <input type="radio" name="q7" value="c"> c. Cara mereka berinteraksi dengan Bumi<br>
+            <input type="radio" name="q7" value="d"> d. Warna dan kecerahan mereka<br>
+          </div>
+      
+          <div class="question">
+            <p>8. Apa yang dimaksud dengan asteroid?</p>
+            <input type="radio" name="q8" value="a"> a. Kumpulan gas dan debu yang mengorbit matahari<br>
+            <input type="radio" name="q8" value="b"> b. Potongan batu yang terbakar di atmosfer Bumi<br>
+            <input type="radio" name="q8" value="c"> c. Batu besar yang mengorbit antara Mars dan Jupiter<br>
+            <input type="radio" name="q8" value="d"> d. Potongan es dan batu yang mengorbit matahari<br>
+          </div>
+      
+          <div class="question">
+            <p>9. Apa perbedaan komet dengan asteroid?</p>
+            <input type="radio" name="q9" value="a"> a. Komet terdiri dari es dan debu, sedangkan asteroid dari logam dan batu<br>
+            <input type="radio" name="q9" value="b"> b. Komet memiliki ekor saat mendekati matahari, sedangkan asteroid tidak<br>
+            <input type="radio" name="q9" value="c"> c. Komet mengorbit matahari, sedangkan asteroid mengorbit planet<br>
+            <input type="radio" name="q9" value="d"> d. Tidak ada perbedaan<br>
+          </div>
+      
+          <div class="question">
+            <p>10. Planet manakah yang dikenal sebagai 'Planet Merah'?</p>
+            <input type="radio" name="q10" value="a"> a. Mars<br>
+            <input type="radio" name="q10" value="b"> b. Venus<br>
+            <input type="radio" name="q10" value="c"> c. Jupiter<br>
+            <input type="radio" name="q10" value="d"> d. Saturnus<br>
+          </div>
+      
+          <div class="btn-container">
+            <button type="submit" id="submit-button" class="btn btn-primary">Kirim Jawaban</button>
+          </div>
+        </form>
+      </div>
+      
+      <script>
+        const quizForm = document.getElementById('quizFormPart1');
+        const correctAnswers = ['c', 'b', 'a', 'b', 'b', 'd', 'c', 'c', 'a', 'a'];
+      
+        quizForm.addEventListener('submit', function(event) {
+          event.preventDefault();
+      
+          let score = 0;
+          let correctCount = 0;
+          let wrongCount = 0;
+          const answers = [
+            quizForm.q1.value,
+            quizForm.q2.value,
+            quizForm.q3.value,
+            quizForm.q4.value,
+            quizForm.q5.value,
+            quizForm.q6.value,
+            quizForm.q7.value,
+            quizForm.q8.value,
+            quizForm.q9.value,
+            quizForm.q10.value
+          ];
+      
+          answers.forEach((answer, index) => {
+            if (answer === correctAnswers[index]) {
+              score += 10;
+              correctCount++;
+            } else {
+              wrongCount++;
+            }
+          });
+      
+          localStorage.setItem('quizScore', score);
+          localStorage.setItem('correctCount', correctCount);
+          localStorage.setItem('wrongCount', wrongCount);
+      
+          window.location.href = 'result.html';
+        });
+      </script>
+</body>
+</html>

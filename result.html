@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Hasil Quiz</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <style>
+    body {
+        background-color: #e3f0f8;
+        color: #2d2b2b;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    }
+    h1 {
+        color: #2e4ead;
+    }
+    .result-container {
+        background-color: #ffffff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        margin-top: 50px;
+    }
+    .btn-center {
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+    }
+    .btn-center button {
+        background-color: #2e4ead;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+        border-radius: 5px;
+    }
+    .btn-center button:hover {
+        background-color: #2e4ead;
+    }
+  </style>
+</head>
+<body>
+<div class="container result-container">
+  <h1 class="text-center mb-4" style="font-size: 40px;">Hasil Quiz</h1>
+  <div id="result" class="text-center"></div>
+  <div class="btn-center mt-4">
+    <button onclick="window.location.href='quiz.html';" class="btn btn-primary">Kembali ke Quiz</button>
+  </div>
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const score = localStorage.getItem('quizScore');
+      const correctCount = localStorage.getItem('correctCount');
+      const wrongCount = localStorage.getItem('wrongCount');
+  
+      document.getElementById('result').innerHTML = `
+        <h2>Skor Anda: ${score}</h2>
+        <p>Jawaban Benar: ${correctCount}</p>
+        <p>Jawaban Salah: ${wrongCount}</p>
+      `;
+    });
+</script>
+</body>
+</html>
